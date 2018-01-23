@@ -1,7 +1,7 @@
 {
   "name": "Flipkart Products Analysis",
   "version": "1.0.0",
-  "description": "This is Flipkart Products Analysis.",
+  "description": "This is Flipkart Products Analysis",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://192.168.1.5:10080/deepimp/Flipkart_Products_Analysis.git"
+    "url": "http://192.168.1.5:10080/deepimp/Promises_Workshop_for_JavaScript.git"
   },
   "pre-commit": [
     "lint"
