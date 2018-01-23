@@ -1,0 +1,31 @@
+{
+  "name": "Flipkart Products Analysis",
+  "version": "1.0.0",
+  "description": "This is Flipkart Products Analysis.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "ESLINT_ARGS='--quiet' make lint"
+  },
+  "devDependencies": {
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.16.0",
+    "jsonlint": "^1.6.2",
+    "pre-commit": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.1.5:10080/deepimp/Flipkart_Products_Analysis.git"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "Deep Govani",
+  "license": "ISC",
+  "dependencies": {
+    "es6-promise": "^4.2.2",
+    "lint": "^1.1.2",
+    "q-io": "^1.13.4"
+  }
+}
