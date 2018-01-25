@@ -1,8 +1,9 @@
 # Flipkart Products Analysis
 This is a command line exercise. This exercise is use for Flipkart products analysis.
 
-# <h2 align="center">  [**Requriements**](#requriements) <b> | </b> [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> <a name="top"></a>  <center>
-<a name="requriements"></a>
+ <h2 align="center">  [**Requriements**](#requriements) <b> | </b> [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> <a name="top"></a>  <center> </h2>
+
+<a name="#requriements"></a>
 ## Requriements
 * Flipkart products data in `CSV file`
 * [cli-table](https://www.npmjs.com/package/cli-table)
@@ -12,9 +13,12 @@ This is a command line exercise. This exercise is use for Flipkart products anal
     <b><a href="#top">↥ back to top</a></b>
 </div>
 <br/>
+
+
 <hr>
-<a name="usage"></a>
-## HeadingUsage
+
+<a name="#usage"></a>
+## Usage
 
 `$node index.js 5 10 1`
 * In terminal you need to pass the three arguments `$node index.js [1] [2] [3]`
@@ -26,12 +30,9 @@ This is a command line exercise. This exercise is use for Flipkart products anal
     * If you write `2` over here than it will show Table in descending order of Brand.
     * If you write `3` over here than it will show Table in ascending order of discount (in %).
     * If you write `4` over here than it will show Table in descending order of discount (in %).
-<br/>
-<div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-</div>
-<br/>
+
 <hr>
+
 <a name="questions"></a>
 ## Questions
 
@@ -39,9 +40,5 @@ This is a command line exercise. This exercise is use for Flipkart products anal
  2. Show `Brand`, `Product Name`, `Product Category Tree`, `Price`, `Discounted Price` data in CLI table in descending  order of `Brand`. If the two products have same brand, Whatever comes first in CSV should be listed first.
  3. Show `Brand`, `Product Name`, `Product Category Tree`, `Price`, `Discounted Price`, `Discount in %` data in CLI table in ascending order of discount(in %) given in products.
  4. Show `Brand`, `Product Name`, `Product Category Tree`, `Price`, `Discounted Price`, `Discount in %` data in CLI table in descending order of discount(in %) given in products.
-<br/>
-<div align="right">
-    <b><a href="#top">↥ back to top</a></b>
-</div>
-<br/>
+
 <hr>
