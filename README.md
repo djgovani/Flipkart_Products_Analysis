@@ -1,7 +1,7 @@
 # Flipkart Products Analysis
 This is a command line exercise. This exercise is use for Flipkart products analysis.
 In this command line exercise we will performe the some oprations like sorting, filtering the data. Now this sorting will apply on the Product brand as acending and decending or. Same as the brand we will sort the dicount percentage as acending and decending order.
-Filltering will apply on all the products in this filter, prodcuts can filter by inputing the minimum price, maximum price and brand name.
+Filltering will apply on all the products in this filter, prodcuts can filter by inputing the minimum price, maximum price, brand name and product category.
 
  <h2 align="center"> [**Requriements**](#requriements) <b> | </b>[**Installation**](#installation) <b> | </b>[**Features**](#features) <b> | </b>    [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> <a name="top"></a>  <center> </h2>
 
@@ -34,7 +34,7 @@ Filltering will apply on all the products in this filter, prodcuts can filter by
 - It will display Brand, Product Name, Product Category Tree, Price, Discounted Price data in CLI table in descending  order of Brand.
 - It will display Brand, Product Name, Product Category Tree, Price, Discounted Price, Discount in % data in CLI table in ascending order of discount(in %) given in products.
 - It will display Brand, Product Name, Product Category Tree, Price, Discounted Price, Discount in % data in CLI table in descending order of discount(in %) given in products.
-- It will display the filtered products by using the minimum Price, maximum Price and Brand name.
+- It will display the filtered products by using the minimum Price, maximum Price, Brand name and Product category.
 
 
 <b><a href="#top">↥ back to top</a></b>
@@ -57,13 +57,15 @@ $node index.js 5 10 1
     * If you write `4` over here than it will show Table in descending order of discount (in %).
 
 ```bash
-$node index.js 5 100 1000 Alisha
+$node index.js 5 100 3000 ABSTAR  OR  $node index.js 5 100 3000 ABSTAR Bags
 ```
-* To filter the products, in terminal you need to pass the arguments `$node index.js [1] [2] [3] [4]`
+* To filter the products, in terminal you need to pass the arguments `$node index.js [1] [2] [3] [4] [5]`
 * `[1]` is for the filter option so here need to pass the `5`. `5` is used to select the filter option.
 * `[2]` is for the minimum price to filter the products for example user need the products having price maximum or equal to `100`.
-* `[3]` is for the maximum price to filter the products for example user need the products having price minimum or equal to `1000`.
-* `[4]` is for the brand name to filter the products for example user need the products having brand name `Alisha`.
+* `[3]` is for the maximum price to filter the products for example user need the products having price minimum or equal to `3000`.
+* `[4]` is for the brand name to filter the products for example user need the products having brand name `ABSTAR`.
+* `[5]` us for the category to filter the products for example user need the products which is in `Bags` category.
+* Here `[5]` is the optional argument.
 
 
 <b><a href="#top">↥ back to top</a></b>
