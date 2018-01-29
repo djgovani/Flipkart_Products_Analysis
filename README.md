@@ -46,7 +46,7 @@ Filltering will apply on all the products in this filter, prodcuts can filter by
 ```bash
 $node index.js 5 10 1
 ```
-* In terminal you need to pass the arguments `$node index.js [1] [2] [3] [4] [5] [6]`
+* To sort the products, in terminal you need to pass the arguments `$node index.js [1] [2] [3]`
 * `[1]` is for the starting range of the records for example user need to start record from `5`.
 * `[2]` is for the ending range of the records for example user need to end the record to `10`.
 * `[1] [2]` means from `5` to `10`. So it will display the records from `5` to `10`.
@@ -55,10 +55,15 @@ $node index.js 5 10 1
     * If you write `2` over here than it will show Table in descending order of Brand.
     * If you write `3` over here than it will show Table in ascending order of discount (in %).
     * If you write `4` over here than it will show Table in descending order of discount (in %).
-    * If you write `5` over here than it will show the filter products as per the inputs.
-* `[4]` is for the minimum price to filter the products for example user need the products having maximum price than `100`.
-* `[5]` is for the maximum price to filter the products for example user need the products having minimum price than `1000`.
-* `[6]` is for the brand name to filter the products for example user need the products having brand name `Alisha`.
+
+```bash
+$node index.js 5 100 1000 Alisha
+```
+* To filter the products, in terminal you need to pass the arguments `$node index.js [1] [2] [3] [4]`
+* `[1]` is for the filter option so here need to pass the `5`. `5` is used to select the filter option.
+* `[2]` is for the minimum price to filter the products for example user need the products having maximum price than `100`.
+* `[3]` is for the maximum price to filter the products for example user need the products having minimum price than `1000`.
+* `[4]` is for the brand name to filter the products for example user need the products having brand name `Alisha`.
 
 
 <b><a href="#top">↥ back to top</a></b>
