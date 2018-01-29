@@ -87,12 +87,13 @@ let filteredRc = 0;
       colWidths: [25, 65, 70, 10, 20],
     });
 
-    products.slice(toRecord, fromRecord).forEach((product) => {
+    //products.slice(toRecord, fromRecord).forEach((product) => {
+      products.forEach((product) => {
       /* process.argv[5] have minPrice
        * process.argv[6] have maxPrice
        * process.argv[7] have the Brand name
       */
-      if ((product.price >= parseInt(process.argv[5], 0) && product.price <= parseInt(process.argv[6], 0)) && (product.brand == process.argv[7])) {
+      if ((product.price >= parseInt(process.argv[3], 0) && product.price <= parseInt(process.argv[4], 0)) && (product.brand == process.argv[5])) {
         table.push([product.brand, product.product_name, product.product_category_tree, product.price, product.discounted_price]);
         filteredRc++;
       }
