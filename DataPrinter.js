@@ -99,10 +99,10 @@ let filteredRc = 0; // Count filtered record
        *| process.argv[6] have Product Category |
        *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       */
-      if ((product.price >= parseInt(process.argv[3], 0) && product.price <= parseInt(process.argv[4], 0)) && (product.brand == process.argv[5]) && ((spProCat[1] == process.argv[6]) || (spProCat[2] == process.argv[6]) || (spProCat[3] == process.argv[6]))) {
+      if ((product.discounted_price >= parseInt(process.argv[3], 0) && product.discounted_price <= parseInt(process.argv[4], 0)) && (product.brand == process.argv[5]) && ((spProCat[1] == process.argv[6]) || (spProCat[2] == process.argv[6]) || (spProCat[3] == process.argv[6]))) {
         table.push([product.brand, product.product_name, product.product_category_tree, product.price, product.discounted_price]);
         rc++;
-      } else if ((product.price >= parseInt(process.argv[3], 0) && product.price <= parseInt(process.argv[4], 0)) && (product.brand == process.argv[5])){
+      } else if ((product.discounted_price >= parseInt(process.argv[3], 0) && product.discounted_price <= parseInt(process.argv[4], 0)) && (product.brand == process.argv[5])){
         table.push([product.brand, product.product_name, product.product_category_tree, product.price, product.discounted_price]);
         rc++;
       }
