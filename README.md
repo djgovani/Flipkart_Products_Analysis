@@ -44,20 +44,23 @@ Filltering will apply on all the products in this filter, prodcuts can filter by
 ## Usage
 
 ```bash
-$node index.js 5 10 1
+$node index.js 1 5 10
 ```
 * To sort the products, in terminal you need to pass the arguments `$node index.js [1] [2] [3]`
-* `[1]` is for the starting range of the records for example user need to start record from `5`.
-* `[2]` is for the ending range of the records for example user need to end the record to `10`.
-* `[1] [2]` means from `5` to `10`. So it will display the records from `5` to `10`.
-* `[3]` is for the ascending and descending order.
+* `[1]` is for the ascending and descending order.
     * If you write `1` over here than it will show Table in ascending order of Brand.
     * If you write `2` over here than it will show Table in descending order of Brand.
     * If you write `3` over here than it will show Table in ascending order of discount (in %).
     * If you write `4` over here than it will show Table in descending order of discount (in %).
+    * If you write `5` over here than it will show Table in ascending order of Product Rating.
+    * If you write `6` over here than it will show Table in descending order of Product Rating.
+* `[2]` is for the starting range of the records for example user need to start record from `5`.
+* `[3]` is for the ending range of the records for example user need to end the record to `10`.
+* `[2] [3]` means from `5` to `10`. So it will display the records from `5` to `10`.
+
 
 ```bash
-$node index.js 5 100 3000 ABSTAR  OR  $node index.js 5 100 3000 ABSTAR Bags
+$node index.js 7 100 3000 ABSTAR  OR  $node index.js 7 100 3000 ABSTAR Bags
 ```
 * To filter the products, in terminal you need to pass the arguments `$node index.js [1] [2] [3] [4] [5]`
 * `[1]` is for the filter option so here need to pass the `5`. `5` is used to select the filter option.
