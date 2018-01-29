@@ -52,7 +52,7 @@ const fileParser = (filePath) => {
       sortDisPer(parsedProducts);
     } else if (process.argv[4] === '4'){
       sortDisPerR(parsedProducts);
-    } else if (process.argv[4] === '5'){
+    } else if (process.argv[2] === '5'){
       print.productFilter(parsedProducts);
     } else {
       print.productDetails(parsedProducts);
