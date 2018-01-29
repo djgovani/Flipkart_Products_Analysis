@@ -34,8 +34,6 @@ const fileParser = (filePath) => {
   });
 
   promise.then((message) => {
-    //sortBrandName(parsedProducts);
-    //sortDisPer(parsedProducts);
     /*
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |  call the function by checking the arguments      |
@@ -78,7 +76,7 @@ const sortBrandName = (proBrand) => {
     return br1.brand < br2.brand ? -1 : br1.brand > br2.brand ? 1 : 0;
   });
 
-  //print without the discount persentage
+  //print without the discount percentage
   print.productDetails(byBrandName);
 }
 
@@ -93,7 +91,7 @@ const sortBrandNameR = (proBrand) => {
     return br1.brand > br2.brand ? -1 : br1.brand < br2.brand ? 1 : 0;
   });
 
-  //print without the discount persentage
+  //print without the discount percentage
   print.productDetails(byBrandName);
 }
 
@@ -108,7 +106,7 @@ const sortDisPer = (dispr) => {
     return dp1.discountPer < dp2.discountPer ? -1 : dp1.discountPer > dp2.discountPer ? 1 : 0;
   });
 
-  //print with the discount persentage
+  //print with the discount percentage
   print.productDetailsPr(byDisPer);
 }
 
@@ -123,6 +121,6 @@ const sortDisPerR = (dispr) => {
     return dp1.discountPer > dp2.discountPer ? -1 : dp1.discountPer < dp2.discountPer ? 1 : 0;
   });
 
-  //print with the discount persentage
+  //print with the discount percentage
   print.productDetailsPr(byDisPer);
 }
