@@ -80,7 +80,7 @@ exports.productDetails = (products) => {
  * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
  */
 exports.productFilter = (products) => {
-let filteredRc = 0;
+let filteredRc = 0; // Count filtered record
   if (products.length > 0) {
     let table = new Table({
       head: ['Brand', 'Product Name', 'Product Category Tree', 'Price', 'Discounted_Price'],
@@ -89,11 +89,20 @@ let filteredRc = 0;
 
     //products.slice(toRecord, fromRecord).forEach((product) => {
       products.forEach((product) => {
-      /* process.argv[5] have minPrice
-       * process.argv[6] have maxPrice
-       * process.argv[7] have the Brand name
+
+      let spProCat = product.product_category_tree.split(/\s*>>\s*/); // Split the product category by >>
+
+      /*|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       *| process.argv[3] have minPrice         |
+       *| process.argv[4] have maxPrice         |
+       *| process.argv[5] have the Brand name   |
+       *| process.argv[6] have Product Category |
+       *~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       */
-      if ((product.price >= parseInt(process.argv[3], 0) && product.price <= parseInt(process.argv[4], 0)) && (product.brand == process.argv[5])) {
+      if ((product.price >= parseInt(process.argv[3], 0) && product.price <= parseInt(process.argv[4], 0)) && (product.brand == process.argv[5]) && ((spProCat[1] == process.argv[6]) || (spProCat[2] == process.argv[6]) || (spProCat[3] == process.argv[6]))) {
+        table.push([product.brand, product.product_name, product.product_category_tree, product.price, product.discounted_price]);
+        filteredRc++;
+      } else if ((product.price >= parseInt(process.argv[3], 0) && product.price <= parseInt(process.argv[4], 0)) && (product.brand == process.argv[5])){
         table.push([product.brand, product.product_name, product.product_category_tree, product.price, product.discounted_price]);
         filteredRc++;
       }
