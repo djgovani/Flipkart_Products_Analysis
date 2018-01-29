@@ -4,9 +4,12 @@ let fs = require('fs');
 let print = require('./DataPrinter');
 let filePath = './Product_Data/data.csv';
 
-// Parser
+/* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ * |                File Parser                    |
+ * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ */
 //exports.file = (callback) => {
-const file = (filePath) => {
+const fileParser = (filePath) => {
   assert.ok(filePath, 'filePath is required');
   let parsedProducts = [];
 
@@ -21,7 +24,7 @@ const file = (filePath) => {
         product_category_tree: data[5],
         price: data[7],
         discounted_price: data[8],
-        //discountPer: (((data[7] - data[8])/data[7])*100).toFixed(2)
+        discountPer: (((data[7] - data[8])/data[7])*100).toFixed(2)
       });
     })
     .on("end", function(){
@@ -33,12 +36,15 @@ const file = (filePath) => {
   promise.then((message) => {
     //sortBrandName(parsedProducts);
     //sortDisPer(parsedProducts);
-
-    /* call the function by checking the arguments
-      1 - Table in ascending order of Brand
-      2 - Table in descending order of Brand
-      3 - Table in ascending order of discount(in %)
-      4 - Table in descending order of discount(in %)
+    /*
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |  call the function by checking the arguments      |
+      |  1 - Table in ascending order of Brand            |
+      |  2 - Table in descending order of Brand           |
+      |  3 - Table in ascending order of discount(in %)   |
+      |  4 - Table in descending order of discount(in %)  |
+      |  5 - Table will show the filtered products        |
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     */
     if (process.argv[4] === '1') {
       sortBrandName(parsedProducts);
@@ -48,17 +54,23 @@ const file = (filePath) => {
       sortDisPer(parsedProducts);
     } else if (process.argv[4] === '4'){
       sortDisPerR(parsedProducts);
+    } else if (process.argv[4] === '5'){
+      print.productFilter(parsedProducts);
+    } else {
+      print.productDetails(parsedProducts);
     }
     //callback(null, parsedProducts);
   }).catch((err) => {
     console.log(err.message);
   });
-
 }
 
-file(filePath);
+fileParser(filePath);
 
-//Table in ascending order of Brand
+/* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ * |      Table in ascending order of Brand        |
+ * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ */
 const sortBrandName = (proBrand) => {
   console.log('Table in ascending order of Brand');
   let byBrandName = proBrand.slice(0);
@@ -70,7 +82,10 @@ const sortBrandName = (proBrand) => {
   print.productDetails(byBrandName);
 }
 
-//Table in descending order of Brand
+/* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ * |      Table in descending order of Brand       |
+ * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ */
 const sortBrandNameR = (proBrand) => {
   console.log('Table in descending order of Brand');
   let byBrandName = proBrand.slice(0);
@@ -82,7 +97,10 @@ const sortBrandNameR = (proBrand) => {
   print.productDetails(byBrandName);
 }
 
-//Table in ascending order of discount(in %)
+/* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ * |   Table in ascending order of discount(in %)  |
+ * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ */
 const sortDisPer = (dispr) => {
   console.log('Table in ascending order of discount(in %)');
   let byDisPer = dispr.slice(0);
@@ -94,7 +112,10 @@ const sortDisPer = (dispr) => {
   print.productDetailsPr(byDisPer);
 }
 
-//Table in descending order of discount(in %)
+/* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ * |  Table in descending order of discount(in %)  |
+ * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ */
 const sortDisPerR = (dispr) => {
   console.log('Table in descending order of discount(in %)');
   let byDisPer = dispr.slice(0);
