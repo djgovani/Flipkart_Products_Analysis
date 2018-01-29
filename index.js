@@ -24,7 +24,8 @@ const fileParser = (filePath) => {
         product_category_tree: data[5],
         price: data[7],
         discounted_price: data[8],
-        discountPer: (((data[7] - data[8])/data[7])*100).toFixed(2)
+        discountPer: (((data[7] - data[8])/data[7])*100).toFixed(2),
+        product_rating: data[12]
       });
     })
     .on("end", function(){
@@ -44,19 +45,25 @@ const fileParser = (filePath) => {
       |  5 - Table will show the filtered products        |
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     */
-    if (process.argv[4] === '1') {
+    if (process.argv[2] === '1') {
       sortBrandName(parsedProducts);
-    } else if (process.argv[4] === '2') {
+    } else if (process.argv[2] === '2') {
       sortBrandNameR(parsedProducts);
-    } else if (process.argv[4] === '3') {
+    } else if (process.argv[2] === '3') {
       sortDisPer(parsedProducts);
-    } else if (process.argv[4] === '4'){
+    } else if (process.argv[2] === '4'){
       sortDisPerR(parsedProducts);
     } else if (process.argv[2] === '5'){
+      sortBrandName(parsedProducts);
+    } else if (process.argv[2] === '6'){
+      sortBrandNameR(parsedProducts);
+    } else if (process.argv[2] === '7'){
       print.productFilter(parsedProducts);
     } else {
       print.productDetails(parsedProducts);
     }
+
+
     //callback(null, parsedProducts);
   }).catch((err) => {
     console.log(err.message);
@@ -76,8 +83,13 @@ const sortBrandName = (proBrand) => {
     return br1.brand < br2.brand ? -1 : br1.brand > br2.brand ? 1 : 0;
   });
 
-  //print without the discount percentage
-  print.productDetails(byBrandName);
+  if (process.argv[2] === '5') {
+    sortProRate(byBrandName);
+  } else {
+    //print without the discount percentage
+    print.productDetails(byBrandName);
+  }
+
 }
 
 /* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
@@ -91,8 +103,13 @@ const sortBrandNameR = (proBrand) => {
     return br1.brand > br2.brand ? -1 : br1.brand < br2.brand ? 1 : 0;
   });
 
-  //print without the discount percentage
-  print.productDetails(byBrandName);
+
+  if (process.argv[2] === '6') {
+    sortProRateR(byBrandName);
+  } else {
+    //print without the discount percentage
+    print.productDetails(byBrandName);
+  }
 }
 
 /* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
@@ -123,4 +140,34 @@ const sortDisPerR = (dispr) => {
 
   //print with the discount percentage
   print.productDetailsPr(byDisPer);
+}
+
+/* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ * |   Table in ascending order of prodcuct rating |
+ * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ */
+const sortProRate = (proRate) => {
+  console.log('Table in ascending order of product_rating');
+  let byProRate = proRate.slice(0);
+  byProRate.sort((pr1, pr2) => {
+    return pr1.product_rating < pr2.product_rating ? -1 : pr1.product_rating > pr2.product_rating ? 1 : 0;
+  });
+
+  //print with the product_rating
+  print.productRatingDetails(byProRate);
+}
+
+/* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ * |  Table in descending order of prodcuct rating |
+ * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+ */
+const sortProRateR = (proRate) => {
+  console.log('Table in ascending order of product_rating');
+  let byProRate = proRate.slice(0);
+  byProRate.sort((pr1, pr2) => {
+    return pr1.product_rating > pr2.product_rating ? -1 : pr1.product_rating < pr2.product_rating ? 1 : 0;
+  });
+
+  //print with the product_rating
+  print.productRatingDetails(byProRate);
 }
