@@ -61,8 +61,8 @@ $node index.js 5 100 1000 Alisha
 ```
 * To filter the products, in terminal you need to pass the arguments `$node index.js [1] [2] [3] [4]`
 * `[1]` is for the filter option so here need to pass the `5`. `5` is used to select the filter option.
-* `[2]` is for the minimum price to filter the products for example user need the products having maximum price than `100`.
-* `[3]` is for the maximum price to filter the products for example user need the products having minimum price than `1000`.
+* `[2]` is for the minimum price to filter the products for example user need the products having price maximum or equal to `100`.
+* `[3]` is for the maximum price to filter the products for example user need the products having price minimum or equal to `1000`.
 * `[4]` is for the brand name to filter the products for example user need the products having brand name `Alisha`.
 
 
