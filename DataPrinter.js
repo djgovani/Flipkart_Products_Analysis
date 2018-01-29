@@ -5,11 +5,11 @@ let fromRecord = parseInt(process.argv[3], 0);
 let rc = fromRecord - toRecord; //Count record which will display
 
 /* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
- * | Show Product Details with Discount Persentage |
+ * | Show Product Details with Discount Percentage |
  * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
  */
 exports.productDetailsPr = (products) => {
-let pr = 0; //count recod which having discount persentage
+let pr = 0; //count recod which having discount percentage
   if (products.length > 0) {
 
     let table = new Table({
@@ -43,7 +43,7 @@ let pr = 0; //count recod which having discount persentage
 };
 
 /* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
- * | Show Product Details without Discount Persentage |
+ * | Show Product Details without Discount percentage |
  * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
  */
 exports.productDetails = (products) => {
