@@ -45,6 +45,8 @@ const sortBrandName = (proBrand) => {
   });
   if (process.argv[2] === '5') {
     sortProRate(byBrandName);
+  } else if (process.argv[2] === '6') {
+    sortProRateR(byBrandName);
   } else {
     console.log('Table in ascending order of Brand');
     // print without the discount percentage
@@ -138,7 +140,9 @@ const fileParser = () => {
       |  2 - Table in descending order of Brand           |
       |  3 - Table in ascending order of discount(in %)   |
       |  4 - Table in descending order of discount(in %)  |
-      |  5 - Table will show the filtered products        |
+      |  5 - Table in ascending order of product rating   |
+      |  6 - Table in descending order of product rating  |
+      |  7 - Table will show the filtered products        |
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     */
     if (process.argv[2] === '1') {
@@ -152,7 +156,7 @@ const fileParser = () => {
     } else if (process.argv[2] === '5'){
       sortBrandName(parsedProducts);
     } else if (process.argv[2] === '6'){
-      sortBrandNameR(parsedProducts);
+      sortBrandName(parsedProducts);
     } else if (process.argv[2] === '7'){
       print.productFilter(parsedProducts);
     } else {
