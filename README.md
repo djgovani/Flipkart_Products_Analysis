@@ -4,7 +4,7 @@ In this command line exercise we will performe the some oprations like sorting, 
 Filltering will apply on all the products in this filter, prodcuts can filter by inputing the minimum discounted price, maximum discounted price, brand name and product category.
 
 
- <h2 align="center"> [**Requriements**](#requriements) <b> | </b>[**Installation**](#installation) <b> | </b>[**Features**](#features) <b> | </b>    [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> | </b> [**Conclusion**](#conclusion) <b> <a name="top"></a>  <center> </h2>
+ <h3 align="center"> [**Requriements**](#requriements) <b> | </b>[**Installation**](#installation) <b> | </b>[**Features**](#features) <b> | </b>    [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> | </b> [**Conclusion**](#conclusion) <b> <a name="top"></a>  <center> </h3>
 
 <a name="#requriements"></a>
 ## Requriements
