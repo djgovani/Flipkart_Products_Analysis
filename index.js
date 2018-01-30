@@ -63,14 +63,9 @@ const sortBrandNameR = (proBrand) => {
   byBrandName.sort((br1, br2) => {
     return br1.brand.toLowerCase() > br2.brand.toLowerCase() ? -1 : br1.brand.toLowerCase() < br2.brand.toLowerCase() ? 1 : 0;
   });
-
-  if (process.argv[2] === '6') {
-    sortProRateR(byBrandName);
-  } else {
-    console.log('Table in descending order of Brand');
-    // print without the discount percentage
-    print.productDetails(byBrandName);
-  }
+  console.log('Table in descending order of Brand');
+  // print without the discount percentage
+  print.productDetails(byBrandName);
 };
 
 /* |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
