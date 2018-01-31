@@ -4,11 +4,11 @@ In this command line exercise we will performe the some oprations like sorting, 
 Filltering will apply on all the products in this filter, prodcuts can filter by inputing the minimum discounted price, maximum discounted price, brand name and product category.
 
 
- <h3 align="center"> [**Requriements**](#requriements) <b> | </b>[**Installation**](#installation) <b> | </b>[**Features**](#features) <b> | </b>    [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> | </b> [**Conclusion**](#conclusion) <b> <a name="top"></a>  <center> </h3>
+ <h3 align="center"> [**Requriements**](#requriements) <b> | </b>[**Setup**](#setup) <b> | </b>[**Features**](#features) <b> | </b>    [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> | </b> [**Conclusion**](#conclusion) <b> <a name="top"></a>  <center> </h3>
 
 <a name="#requriements"></a>
 ## Requriements
-* [npm](https://www.npmjs.com/get-npm) Version greater or equal to  5.6.0
+* [node js](https://www.npmjs.com/get-npm) Version greater or equal to  8.9.4
 * [cli-table](https://www.npmjs.com/package/cli-table)
 * [fast-csv](https://www.npmjs.com/package/fast-csv)
 
@@ -16,12 +16,14 @@ Filltering will apply on all the products in this filter, prodcuts can filter by
 <br/>
 <hr>
 
-<a name="#installation"></a>
-## Installation
-* If you have not install `npm` yet then type `npm install` into your terminal.
-* Still left to install `cli-table` type `npm install cli-table` into your terminal.
-* Same as need to install `fast-csv` type `npm install fast-csv` into your terminal.
-* After that run the application as shown in [usage](#usage).
+<a name="#setup"></a>
+## Setup
+* Install all dependencies by typing `npm install` in terminal.
+* <a href="#top">Download</a> or clone this project. To clone the project type below command in terminal.
+
+```bash
+    $git clone http://192.168.1.5:10080/deepimp/Flipkart_Products_Analysis.git
+```
 
 <b><a href="#top">↥ back to top</a></b>
 <br/>
@@ -29,9 +31,7 @@ Filltering will apply on all the products in this filter, prodcuts can filter by
 
 <a name="#features"></a>
 ## Features
-- It will display the total number of records.
 - It will display the total number of displaying records out of the total number of records.
-- It will display the total number of record having discount out of the displaying records.
 - It will display Brand, Product Name, Product Category Tree, Price, Discounted Price data in CLI table in ascending order of Brand.
 - It will display Brand, Product Name, Product Category Tree, Price, Discounted Price data in CLI table in descending  order of Brand.
 - It will display Brand, Product Name, Product Category Tree, Price, Discounted Price, Discount in % data in CLI table in ascending order of discount(in %) given in products.
