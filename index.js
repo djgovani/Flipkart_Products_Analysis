@@ -12,7 +12,7 @@ const filePath = './Product_Data/data.csv';
  * |                File Parser                    |
  * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
  */
-const fileParser = () => {
+const fileParser = (filePath) => {
   assert.ok(filePath, 'filePath is required');
   let parsedProducts = [];
   const promise = new Promise((fulfill) =>{
