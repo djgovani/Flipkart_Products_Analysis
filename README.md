@@ -1,7 +1,6 @@
 # Flipkart Products Analysis
 This is a command line exercise. This exercise is use for Flipkart products analysis.
-In this command line exercise we will performe the some oprations like sorting, filtering the data. Now this sorting will apply on the Product brand as acending and decending or. Same as the brand, we will sort the dicount percentage and product rating as acending and decending order.
-Filltering will apply on all the products in this filter, prodcuts can filter by inputing the minimum discounted price, maximum discounted price, brand name and product category.
+In this command line exercise we will analyze the products by various parameters like we can analyze the products by brand name, discount percentage, filteration and by using the product ratings too.
 
 
  <h3 align="center"> [**Requriements**](#requriements) <b> | </b>[**Setup**](#setup) <b> | </b>[**Features**](#features) <b> | </b>    [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> | </b> [**Conclusion**](#conclusion) <b> <a name="top"></a>  <center> </h3>
@@ -9,8 +8,6 @@ Filltering will apply on all the products in this filter, prodcuts can filter by
 <a name="#requriements"></a>
 ## Requriements
 * [node js](https://www.npmjs.com/get-npm) Version greater or equal to  8.9.4
-* [cli-table](https://www.npmjs.com/package/cli-table)
-* [fast-csv](https://www.npmjs.com/package/fast-csv)
 
 <b><a href="#top">↥ back to top</a></b>
 <br/>
@@ -18,12 +15,17 @@ Filltering will apply on all the products in this filter, prodcuts can filter by
 
 <a name="#setup"></a>
 ## Setup
-* Install all dependencies by typing `npm install` in terminal.
 * <a href="#top">Download</a> or clone this project. To clone the project type below command in terminal.
 
-```bash
-    $git clone http://192.168.1.5:10080/deepimp/Flipkart_Products_Analysis.git
-```
+    ```bash
+        git clone http://192.168.1.5:10080/deepimp/Flipkart_Products_Analysis.git
+    ```
+
+* Install all dependencies
+
+    ```bash
+        npm install
+    ```
 
 <b><a href="#top">↥ back to top</a></b>
 <br/>
@@ -48,9 +50,9 @@ Filltering will apply on all the products in this filter, prodcuts can filter by
 ## Usage
 
 ```bash
-$node index.js 1 5 10
+node index.js 1 5 10
 ```
-* To sort the products, in terminal you need to pass the arguments `$node index.js [1] [2] [3]`
+* To sort the products, in terminal you need to pass the arguments `node index.js [1] [2] [3]`
 * `[1]` is for the ascending and descending order.
     * If you write `1` over here than it will show Table in ascending order of Brand.
     * If you write `2` over here than it will show Table in descending order of Brand.
@@ -64,9 +66,9 @@ $node index.js 1 5 10
 
 
 ```bash
-$node index.js 7 100 3000 ABSTAR  OR  $node index.js 7 100 3000 ABSTAR Bags
+node index.js 7 100 3000 ABSTAR  OR  node index.js 7 100 3000 ABSTAR Bags
 ```
-* To filter the products, in terminal you need to pass the arguments `$node index.js [1] [2] [3] [4] [5]`
+* To filter the products, in terminal you need to pass the arguments `node index.js [1] [2] [3] [4] [5]`
 * `[1]` is for the filter option so here need to pass the `5`. `5` is used to select the filter option.
 * `[2]` is for the minimum price to filter the products for example user need the products having discount price maximum or equal to `100`.
 * `[3]` is for the maximum price to filter the products for example user need the products having discount price minimum or equal to `3000`.
@@ -85,9 +87,12 @@ $node index.js 7 100 3000 ABSTAR  OR  $node index.js 7 100 3000 ABSTAR Bags
  1. Show `Brand`, `Product Name`, `Product Category Tree`, `Price`, `Discounted Price` data in CLI table in ascending order of `Brand`. If the two products have same brand, Whatever comes first in CSV should be listed first.
 
     ```bash
-    $node index.js 1 5 10
+    node index.js 1 5 10
     ```
 
+    * `1` it will show Table in ascending order of Brand.
+    * `5` to `10` So it will display the records from `5` to `10`.
+<br><br>
 
     | Brand           | Product Name                | Product Category Tree            | Price | Discounted Price |
     | --------        | --------                    | --------                         | ------| ------           |
@@ -102,9 +107,11 @@ $node index.js 7 100 3000 ABSTAR  OR  $node index.js 7 100 3000 ABSTAR Bags
  2. Show `Brand`, `Product Name`, `Product Category Tree`, `Price`, `Discounted Price` data in CLI table in descending  order of `Brand`. If the two products have same brand, Whatever comes first in CSV should be listed first.
 
     ```bash
-    $node index.js 2 5 10
+    node index.js 2 5 10
     ```
-
+    * `2` it will show Table in descending order of Brand.
+    * `5` to `10` So it will display the records from `5` to `10`.
+<br><br>
 
     | Brand           | Product Name                | Product Category Tree            | Price | Discounted Price |
     | --------        | --------                    | --------                         | ------| ------           |
@@ -119,9 +126,11 @@ $node index.js 7 100 3000 ABSTAR  OR  $node index.js 7 100 3000 ABSTAR Bags
  3. Show `Brand`, `Product Name`, `Product Category Tree`, `Price`, `Discounted Price`, `Discount in %` data in CLI table in ascending order of discount(in %) given in products.
 
     ```bash
-    $node index.js 3 5 10
+    node index.js 3 5 10
     ```
-
+    * `3` it will show Table in ascending order of discount(in %).
+    * `5` to `10` So it will display the records from `5` to `10`.
+<br><br>
 
     | Brand           | Product Name                | Product Category Tree            | Price | Discounted Price | Discount %|
     | --------        | --------                    | --------                         | ------| ------           | --------  |
@@ -135,9 +144,11 @@ $node index.js 7 100 3000 ABSTAR  OR  $node index.js 7 100 3000 ABSTAR Bags
  4. Show `Brand`, `Product Name`, `Product Category Tree`, `Price`, `Discounted Price`, `Discount in %` data in CLI table in descending order of discount(in %) given in products.
 
     ```bash
-    $node index.js 4 5 10
+    node index.js 4 5 10
     ```
-
+    * `4` it will show Table in descending order of discount(in %).
+    * `5` to `10` So it will display the records from `5` to `10`.
+<br><br>
 
     | Brand           | Product Name                | Product Category Tree            | Price | Discounted Price | Discount %|
     | --------        | --------                    | --------                         | ------| ------           | --------  |
@@ -162,9 +173,12 @@ $node index.js 7 100 3000 ABSTAR  OR  $node index.js 7 100 3000 ABSTAR Bags
        Then It should show list of products which fulfill above conditions.
 
     ```bash
-    $node index.js 7 100 1000 VGreen Tools
+    node index.js 7 100 1000 VGreen Tools
     ```
-
+    * `7` it will show the the filtered record table.
+    * `100` to `1000` So it will display the records which having minimum discount price `100` and maximum discount price `1000`.
+    * `VGreen` `Tools` it will display the records which having the `VGreen` Brand name and `Tools` category.
+<br><br>
 
     | Brand     | Product Name               | Product Category Tree            | Price | Discounted Price |
     | --------  | --------                   | --------                         | ------| ------           |
@@ -177,9 +191,11 @@ $node index.js 7 100 3000 ABSTAR  OR  $node index.js 7 100 3000 ABSTAR Bags
  6. List products in ascending order of product ratings. If any products have same ratings then whatever come first in csv should be listed first. Ignore products which have no rating yet.
 
     ```bash
-    $node index.js 5 1 10
+    node index.js 5 1 10
     ```
-
+    * `5` it will show Table in ascending order of product rating.
+    * `5` to `10` So it will display the records from `5` to `10`.
+<br><br>
 
     | Brand          | Product Name              | Product Category Tree            | Price | Discounted Price | Product Rating |
     | --------       | --------                  | --------                         | ------| ------           | ------         |
@@ -191,9 +207,11 @@ $node index.js 7 100 3000 ABSTAR  OR  $node index.js 7 100 3000 ABSTAR Bags
  7.  List products in descending order of product ratings. If any products have same ratings then whatever come last in csv should be listed first. Ignore products which have no rating yet.
 
     ```bash
-    $node index.js 5 1 10
+    node index.js 5 1 10
     ```
-
+    * `6` it will show Table in descending order of product rating.
+    * `5` to `10` So it will display the records from `5` to `10`.
+<br><br>
 
     | Brand          | Product Name              | Product Category Tree            | Price | Discounted Price | Product Rating |
     | --------       | --------                  | --------                         | ------| ------           | ------         |
@@ -210,7 +228,7 @@ $node index.js 7 100 3000 ABSTAR  OR  $node index.js 7 100 3000 ABSTAR Bags
 <a name="conclusion"></a>
 ## Conclusion
 
-In this exercise we have done the sorting of Brand, discount percentage and product rating in ascending and descending order. As well as we have done the filter option which filter the products according to the user input like minimum discount price, maximum discount price, brand name, category.
+In this exercise we have seen that the analysis of products can be done by using the various parameters like Brand, discount price, etc... Also analysis of products can be done by using the filteration.
 
 <b><a href="#top">↥ back to top</a></b>
 <br/>
