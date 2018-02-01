@@ -31,9 +31,9 @@ parser(filePath).then((parsedProducts) => {
   } else if (process.argv[2] === '4'){
     print.showProducts(sortByDiscountPercentage.sortDiscountPercentage(parsedProducts,4));
   } else if (process.argv[2] === '5'){
-    print.showProducts(sortByProductRating.sortProductRating(parsedProducts));
+    print.showProducts(sortByProductRating.sortProductRating(parsedProducts,5));
   } else if (process.argv[2] === '6'){
-    print.showProducts(sortByProductRating.sortProductRating(parsedProducts));
+    print.showProducts(sortByProductRating.sortProductRating(parsedProducts,6));
   } else if (process.argv[2] === '7'){
     print.showProducts(productFilter.productFilter(parsedProducts));
   } else {
