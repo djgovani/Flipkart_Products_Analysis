@@ -23,13 +23,13 @@ parser(filePath).then((parsedProducts) => {
       |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
       */
   if (process.argv[2] === '1') {
-    print.showProducts(sortByBrand.sortBrandName(parsedProducts));
+    print.showProducts(sortByBrand.sortBrandName(parsedProducts,1));
   } else if (process.argv[2] === '2') {
-    print.showProducts(sortByBrand.sortBrandName(parsedProducts));
+    print.showProducts(sortByBrand.sortBrandName(parsedProducts,2));
   } else if (process.argv[2] === '3') {
-    print.showProducts(sortByDiscountPercentage.sortDiscountPercentage(parsedProducts));
+    print.showProducts(sortByDiscountPercentage.sortDiscountPercentage(parsedProducts,3));
   } else if (process.argv[2] === '4'){
-    print.showProducts(sortByDiscountPercentage.sortDiscountPercentage(parsedProducts));
+    print.showProducts(sortByDiscountPercentage.sortDiscountPercentage(parsedProducts,4));
   } else if (process.argv[2] === '5'){
     print.showProducts(sortByProductRating.sortProductRating(parsedProducts));
   } else if (process.argv[2] === '6'){
