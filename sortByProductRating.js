@@ -2,16 +2,16 @@
  * | Sort the Product Rating in ascending and descending order |
  * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
  */
-exports.sortProductRating = (prodctRating) => {
+exports.sortProductRating = (prodctRating, order) => {
   prodctRating.forEach((product) => {
     delete product.discount_percentage;
   });
 
   let byProductRating = prodctRating.slice(0);
   byProductRating.sort((pr1, pr2) => {
-    if (process.argv[2] === '5') {
+    if (order === 5) {
       return pr1.product_rating < pr2.product_rating ? -1 : pr1.product_rating > pr2.product_rating ? 1 : 0;
-    } else if (process.argv[2] === '6') {
+    } else if (order === 6) {
       return pr1.product_rating > pr2.product_rating ? -1 : pr1.product_rating < pr2.product_rating ? 1 : 0;
     }
   });
