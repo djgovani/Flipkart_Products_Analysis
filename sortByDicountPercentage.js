@@ -5,6 +5,9 @@
 exports.sortDiscountPercentage = (dispr) => {
   dispr.forEach((product) => {
     delete product.product_rating;
+
+    product.discount_percentage = (((product.price - product.discounted_price) / product.price) * 100).toFixed(2);
+
     if (isNaN(product.discount_percentage)) {
       product.discount_percentage = 0;
     } else {
