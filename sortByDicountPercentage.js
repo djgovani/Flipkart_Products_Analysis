@@ -2,7 +2,7 @@
  * | Sort the Discount Percentage in ascending and descending order |
  * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
  */
-exports.sortDiscountPercentage = (dispr) => {
+exports.sortDiscountPercentage = (dispr, order) => {
   dispr.forEach((product) => {
     delete product.product_rating;
 
@@ -17,9 +17,9 @@ exports.sortDiscountPercentage = (dispr) => {
 
   let byDiscountPercentage = dispr.slice(0);
   byDiscountPercentage.sort((dp1, dp2) => {
-    if (process.argv[2] === '3') {
+    if (order === 3) {
       return dp1.discount_percentage < dp2.discount_percentage ? -1 : dp1.discount_percentage > dp2.discount_percentage ? 1 : 0;
-    } else if (process.argv[2] === '4') {
+    } else if (order === 4) {
       return dp1.discount_percentage > dp2.discount_percentage ? -1 : dp1.discount_percentage < dp2.discount_percentage ? 1 : 0;
     }
   });
