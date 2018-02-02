@@ -22,6 +22,7 @@ parser(filePath).then((parsedProducts) => {
       |  7 - Table will show the filtered products        |
       |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
       */
+    //console.log(parsedProducts);
   if (process.argv[2] === '1') {
     print.showProducts(sortByBrand.sortBrandName(parsedProducts,1));
   } else if (process.argv[2] === '2') {
@@ -35,9 +36,9 @@ parser(filePath).then((parsedProducts) => {
   } else if (process.argv[2] === '6'){
     print.showProducts(sortByProductRating.sortProductRating(parsedProducts,6));
   } else if (process.argv[2] === '7'){
-    print.showProducts(productFilter.productFilter(parsedProducts));
+    print.showProducts(productFilter.productFilter(parsedProducts, parseInt(process.argv[3]), parseInt(process.argv[4]), process.argv[5], process.argv[6]));
   } else {
-    print.productDetails(parsedProducts);
+    print.showProducts(parsedProducts);
   }
 }).catch((err) => {
   console.log(err.message);
