@@ -2,7 +2,7 @@
  * | Sort the Product item in ascending and descending order |
  * |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
  */
-exports.sort = (order, product, item) => {
+exports.sorting = (order, product, item) => {
   product.sort((br1, br2) => {
     switch(order){
       case 1: return br1[item].toLowerCase() < br2[item].toLowerCase() ? -1 : br1[item].toLowerCase() > br2[item].toLowerCase() ? 1 : 0;
