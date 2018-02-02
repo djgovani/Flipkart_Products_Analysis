@@ -22,19 +22,18 @@ parser(filePath).then((parsedProducts) => {
       |  7 - Table will show the filtered products        |
       |~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
       */
-    //console.log(parsedProducts);
   if (process.argv[2] === '1') {
     print.showProducts(sortByBrand.sortBrandName(parsedProducts,1));
   } else if (process.argv[2] === '2') {
     print.showProducts(sortByBrand.sortBrandName(parsedProducts,2));
   } else if (process.argv[2] === '3') {
-    print.showProducts(sortByDiscountPercentage.sortDiscountPercentage(parsedProducts,3));
+    print.showProducts(sortByDiscountPercentage.sortDiscountPercentage(parsedProducts,3)); // 3 for ascending order
   } else if (process.argv[2] === '4'){
-    print.showProducts(sortByDiscountPercentage.sortDiscountPercentage(parsedProducts,4));
+    print.showProducts(sortByDiscountPercentage.sortDiscountPercentage(parsedProducts,4)); // 4 for descending order
   } else if (process.argv[2] === '5'){
-    print.showProducts(sortByProductRating.sortProductRating(parsedProducts,5));
+    print.showProducts(sortByProductRating.sortProductRating(parsedProducts,3)); // 3 for ascending order
   } else if (process.argv[2] === '6'){
-    print.showProducts(sortByProductRating.sortProductRating(parsedProducts,6));
+    print.showProducts(sortByProductRating.sortProductRating(parsedProducts,4)); // 4 for descending order
   } else if (process.argv[2] === '7'){
     print.showProducts(productFilter.productFilter(parsedProducts, parseInt(process.argv[3]), parseInt(process.argv[4]), process.argv[5], process.argv[6]));
   } else {
