@@ -8,5 +8,5 @@ exports.sortBrandName = (proBrand, order) => {
   proBrand.forEach((product) => {
     delete product.product_rating;
   });
-  return sort.sort(order, proBrand, 'brand');
+  return sort.sorting(order, proBrand, 'brand');
 };
