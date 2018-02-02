@@ -15,5 +15,5 @@ exports.sortDiscountPercentage = (discountPercentage, order) => {
       product.discount_percentage = `${product.discount_percentage} %`;
     }
   });
-  return sort.sorting(order, discountPercentage, 'discount_percentage');;
+  return sort.sorting(order, discountPercentage, 'discount_percentage');
 };
