@@ -3,7 +3,7 @@ This is a command line exercise. This exercise is use for Flipkart products anal
 In this command line exercise we will analyze the products by various parameters like we can analyze the products by brand name, discount percentage, filteration and by using the product ratings too.
 
 
- <h3 align="center"> [**Requriements**](#requriements) <b> | </b>[**Setup**](#setup) <b> | </b>[**Features**](#features) <b> | </b>    [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> | </b> [**Conclusion**](#conclusion) <b> <a name="top"></a>  <center> </h3>
+ <h3 align="center"> <a href="#requriements"> Requriements<b> | </b>[**Setup**](#setup) <b> | </b>[**Features**](#features) <b> | </b>    [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> | </b> [**Conclusion**](#conclusion) <b> <a name="top"></a>  <center> </h3>
 
 <a name="#requriements"></a>
 ## Requriements
@@ -15,16 +15,16 @@ In this command line exercise we will analyze the products by various parameters
 
 <a name="#setup"></a>
 ## Setup
-* <a href="#top">Download</a> or clone this project. To clone the project type below command in terminal.
+* Download or clone this project. To clone the project type below command in terminal.
 
     ```bash
-        https://github.com/djgovani/Flipkart_Products_Analysis.git
+    git clone https://github.com/djgovani/Flipkart_Products_Analysis.git
     ```
 
 * Install all dependencies
 
     ```bash
-        npm install
+    npm install
     ```
 
 <b><a href="#top">↥ back to top</a></b>
