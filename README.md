@@ -3,7 +3,7 @@ This is a command line exercise. This exercise is use for Flipkart products anal
 In this command line exercise we will analyze the products by various parameters like we can analyze the products by brand name, discount percentage, filteration and by using the product ratings too.
 
 
- <h3 align="center"> <a href="#requriements"> Requriements<b> | </b>[**Setup**](#setup) <b> | </b>[**Features**](#features) <b> | </b>    [**Usage**](#usage) <b> | </b> [**Questions**](#questions) <b> | </b> [**Conclusion**](#conclusion) <b> <a name="top"></a>  <center> </h3>
+ <h3 align="center"> <a href="#requriements"> Requriements </a> <b> | </b> <a href="#setup"> Setup </a> <b> | </b> <a href="#features"> Features </a> <b> | </b>  <a href="#usage"> Usage </a> <b> | </b> <a href="#questions"> Questions </a><b> | </b> <a href="#conclusion"> Conclusion </a> <b> <a name="top"></a>  <center> </h3>
 
 <a name="#requriements"></a>
 ## Requriements
