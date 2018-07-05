@@ -18,7 +18,7 @@ In this command line exercise we will analyze the products by various parameters
 * <a href="#top">Download</a> or clone this project. To clone the project type below command in terminal.
 
     ```bash
-        git clone http://192.168.1.5:10080/deepimp/Flipkart_Products_Analysis.git
+        https://github.com/djgovani/Flipkart_Products_Analysis.git
     ```
 
 * Install all dependencies
