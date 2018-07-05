@@ -192,7 +192,7 @@ node index.js 7 100 3000 ABSTAR  OR  node index.js 7 100 3000 ABSTAR Bags
  6. List products in ascending order of product ratings. If any products have same ratings then whatever come first in csv should be listed first. Ignore products which have no rating yet.
 
     ```bash
-    node index.js 5 1 10
+    node index.js 5 5 10
     ```
     * `5` it will show Table in ascending order of product rating.
     * `5` to `10` So it will display the records from `5` to `10`.
@@ -205,24 +205,21 @@ node index.js 7 100 3000 ABSTAR  OR  node index.js 7 100 3000 ABSTAR Bags
     | Xenio          | Xenio GL86 Tempered Glass | ["Mobiles & Accessories >> Mob...| 999   | 180              | 1              |
 
 
- 7.  List products in descending order of product ratings. If any products have same ratings then whatever come last in csv should be listed first. Ignore products which have no rating yet.
-    
-     ```bash
-     node index.js 5 1 10
-     ```
-     * `6` it will show Table in descending order of product rating.
-     * `5` to `10` So it will display the records from `5` to `10`.
 
-<br>
+ 7. List products in descending order of product ratings. If any products have same ratings then whatever come last in csv should be listed first. Ignore products which have no rating yet.
 
+    ```bash
+    node index.js 6 5 10
+    ```
+    * `6` it will show Table in descending order of product rating.
+    * `5` to `10` So it will display the records from `5` to `10`.
+<br><br>
 
     | Brand          | Product Name              | Product Category Tree            | Price | Discounted Price | Product Rating |
     | --------       | --------                  | --------                         | ------| ------           | ------         |
-    | Zyxel          | Zyxel 500 Mbps Powerl...  | ["Computers >> Network Compone...| 8646  | 4800             | 5              |
+    | Zyxel          | Zyxel 500 Mbps Powerl...  | ["Computers >> Network Compone...| 8646  | 4800              | 5              |
     | Tenda          | Tenda A5                  | ["Computers >> Network Compone...| 1299  | 750              | 5              |
-    | Tenda          | Tenda F3 300mbps Wireless | ["Computers >> Network Compone...| 3500  | 1899             | 5              |
-
-
+    | Tenda          | Tenda F3 300mbps Wireless | ["Computers >> Network Compone...| 3500  | 1899              | 5              |
 
 **Actual output data might be different.* <br/>
 <b><a href="#top">↥ back to top</a></b>
